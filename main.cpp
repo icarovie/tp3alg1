@@ -32,16 +32,14 @@ int main(int argc, char **argv) {
     for (int i = 0; i < tamanho; i++) {
         for (int j = 0; j < tamanho; j++) {
             dados >> matriz[i][j];
-            cout << matriz[i][j];
         }
-        cout << endl;
     }
-    cout << "------------------------" <<endl;
+
     Sudoku *sudoku = new Sudoku(I,J,tamanho,matriz);
 
     // Verifico se existe solução
     existeSolucaoSudoku = sudoku->solucionarSudoku();
-    //(existeSolucaoSudoku == true) ? cout << "solucao" << endl : cout << "sem solucao" << endl;
+    (existeSolucaoSudoku == true) ? cout << "solucao" << endl : cout << "sem solucao" << endl;
 
     // Imprimo a matriz solucionada
     for (int i = 0; i < tamanho; i++) {

@@ -1,5 +1,4 @@
 #include <iostream>
-
 #include "Sudoku.hpp"
 
 using namespace std;
@@ -40,18 +39,16 @@ bool Sudoku::solucionarSudoku(){
 }
 
 bool Sudoku::sudokuAindaNaoFoiSolucionado(int &linha, int &coluna) {
-    linha = 0;
-    coluna = 0;
-
-    while(linha <  tamanho){
-        while(coluna < tamanho){
-            if (matriz[linha][coluna] == 0)
+    int valorPosicao;
+    for (linha = 0; linha < tamanho; linha++) {
+        for (coluna = 0; coluna < tamanho; coluna++) {
+            valorPosicao = matriz[linha][coluna];
+            if (valorPosicao == 0){
                 return true;
-            coluna++;
+            }
         }
-        linha++;
-    }
-    return false;
+  }
+  return false;
 }
 
 bool Sudoku::verificarConflitos(int linha, int coluna, int valor){
