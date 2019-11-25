@@ -14,9 +14,8 @@ bool Sudoku::solucionarSudoku(){
     int linha, coluna;
 
     // Se o sudoku já tiver sido solucionado
-    if (!sudokuAindaNaoFoiSolucionado(linha, coluna)) {
+    if (!sudokuAindaNaoFoiSolucionado(linha, coluna))
         return true;
-    }
 
     /*
     * Primeiro vou ver se posso colocar o valor naquela posição,
@@ -47,7 +46,7 @@ bool Sudoku::sudokuAindaNaoFoiSolucionado(int &linha, int &coluna) {
                 return true;
             }
         }
-  }
+    }
   return false;
 }
 
